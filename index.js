@@ -19,8 +19,12 @@ function retrieveData(callback) {
   xhr.send(null);
 }
 
-retrieveData(data => {
+retrieveData(menuItems => {
   console.warn('DATA', data);
-  console.warn('ELEM', document.getElementById('menu'));
-  document.getElementById('menu').innerHTML = data;
+  menuItems.forEach((item, i) => {
+    let type = item.Type === 'Appetizer' ? 'appetizers' :
+      (item.Type === 'Dessert' ? 'desserts' : 'entrees');
+    let side = (i % 2) ? 'left' : 'right';
+    document.getElementById(`${side}-${type}`).innerHTML += item.Item;
+  });
 })
