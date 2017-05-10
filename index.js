@@ -19,5 +19,7 @@ function retrieveData(callback) {
 }
 
 retrieveData(data => {
+  console.warn('DATA', data);
+  console.warn('ELEM', document.getElementById('menu'));
   document.getElementById('menu').innerHTML = data;
 })
