@@ -20,11 +20,13 @@ function retrieveData(callback) {
 }
 
 retrieveData(menuItems => {
-  console.warn('DATA', data);
+  console.warn('DATA', menuItems);
   menuItems.forEach((item, i) => {
     let type = item.Type === 'Appetizer' ? 'appetizers' :
       (item.Type === 'Dessert' ? 'desserts' : 'entrees');
     let side = (i % 2) ? 'left' : 'right';
+    console.warn('Adding', item.Item);
+    console.warn('to', `${side}-${type}`);
     document.getElementById(`${side}-${type}`).innerHTML += item.Item;
   });
 })
