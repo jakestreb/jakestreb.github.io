@@ -19,5 +19,5 @@ function retrieveData(callback) {
 }
 
 retrieveData(data => {
-  return data;
+  document.getElementById('menu').text = data;
 })
