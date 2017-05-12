@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
 
     <title>Urban Harvest</title>
 
@@ -17,22 +18,19 @@
   <body>
 
     <!-- Static navbar -->
-    <div id="index-navbar" class="navbar-container" role="navigation">
+    <div id="news-navbar" class="navbar-container" role="navigation">
         <div class="navbar-header justify-ends-layout">
 			<a class="navbar-brand" href="index.html">URBAN HARVEST</a>
 			<ul class="nav-links">
 				<li class="nav-link"><a href="menu.html">MENU</a></li>
 				<li class="nav-link"><a href="locations.html">LOCATIONS</a></li>
-				<li class="nav-link"><a href="staff.html">OUR TEAM</a></li>
+				<li class="nav-link active"><a href="staff.html">OUR TEAM</a></li>
 			</ul>
         </div>
-        <div class="navbar-overlay center-content">
-        	<div><h1 class="large-text white">WELCOME</h1></div>
-        	<div><p class="gray">A casual dining experience in the heart of New York City</p></div>
-        </div>
+        <div class="navbar-overlay"></div>
     </div>
 
-    <div id="news" class="content ml mr">
+    <div id="staff" class="content ml mr">
 
 	    <div class="spinner" v-if="!gristData">
 	    	<div class="bounce1"></div>
@@ -40,10 +38,10 @@
 			<div class="bounce3"></div>
 	    </div>
 
-		<div class="mb" v-for="post in gristData" v-show="gristData" style="display: none;">
-			<h2>{{ post.Title }}</h2>
-			<p class="gray">{{ post.Date }}</p>
-			<p>{{ post.Content }}</p>
+		<div class="mb" v-for="chef in gristData" v-show="gristData" style="display: none;">
+			<h2>{{ chef.Name }}</h2>
+			<p class="gray">{{ chef.Title }}</p>
+			<p>{{ chef.Background }}</p>
 		</div>
 
 	</div>
@@ -68,7 +66,7 @@
     <script src="grist.js"></script>
     <script src="https://unpkg.com/vue"></script>
     <script>
-    	grist.loadDataUsingVue('eHI21Z3LL1DKA', 'news');
+    	grist.loadDataUsingVue('eFBPM7MJ7TN0I', 'staff');
     </script>
-	</body>
+  </body>
 </html>

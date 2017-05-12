@@ -41,6 +41,13 @@
     padding: 0;
 }
 
+.center-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
 .centered {
 	text-align: center
 }
@@ -50,18 +57,33 @@
 }
 
 .mb {
-	margin-bottom: 80px;
+	margin-bottom: 40px;
+}
+
+.ml {
+	margin-left: 40px;
+}
+
+.mr {
+	margin-right: 40px;
 }
 
 /* ==========================================================================
    General styles
    ========================================================================== */
 
+html {
+    height: 100%;
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 16px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
@@ -70,30 +92,85 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
     color: #4a4a4a;
+    margin: 10px 0;
 }
 
+p {
+	margin: 10px 0;
+}
+
+a {
+	color: #5abfab;
+	text-decoration-line: none;
+}
+
+.large-text {
+	font-size: 3.4rem;
+}
 
 .navbar-brand {
+	font-size: 1.4rem;
+	padding: 15px;
 	font-weight: 700;
 }
 
-.navbar-default .navbar-brand {
-	color: #1abc9c;
+.navbar-header {
+	position: absolute;
+	width: 100%;
 }
 
-.navbar-default {
-	background-color: black;
-	border-color: transparent;
+.nav-links {
+
 }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	color: #1abc9c;
-	background-color: transparent;
-	border-bottom: 2px solid #1abc9c
+.nav-link {
+	display: inline-block;
+	padding: 5px 20px 5px 0;
+	font-weight: 500;
 }
 
-.navbar-default .navbar-nav > li > a {
-	color: #1abc9c;
+.nav-link.active > a {
+	color: rgba(90, 191, 171, .5);
+}
+
+.content {
+	flex: 1 1 0;
+	padding: 30px 0 50px 0;
+}
+
+.navbar-container {
+	height: 200px;
+	width: 100%;
+	color: white;
+}
+
+#index-navbar {
+	/* Marius Iordache - http://www.public-domain-image.com/public-domain-images-pictures-
+	 	free-stock-photos/flora-plants-public-domain-images-pictures/vegetables-public-
+	 	domain-images-pictures/pepper-pictures/fruits-vegetables-pepper.jpg */
+	background: url("../img/Fruits_vegetables_pepper.jpg") no-repeat center bottom;
+	height: 600px;
+}
+
+#menu-navbar {
+    /* Luca Nebuloni - https://www.flickr.com/photos/nebulux/7822721154/ */
+	background: url("../img/Pad_Thai_(7822721154).jpg") no-repeat center bottom;
+}
+
+#locations-navbar {
+    /* NASA - http://spaceflight.nasa.gov/gallery/images/station/crew-35/html/iss035e008056.html */
+	background: url(../img/ISS-35_New_York_City_metropolitan_area.jpg) no-repeat center bottom;
+}
+
+#news-navbar {
+    /* Rainer Zenz at the German language Wikipedia */
+	background: url(../img/Pfeffer-Gewurz.jpg) no-repeat center bottom;
+}
+
+.navbar-overlay {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* ==========================================================================
@@ -101,7 +178,6 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 
 #headerwrap {
-	background: url(../img/back.jpg) no-repeat center top;
 	margin-top: -70px;
 	padding-top: 250px;
 	text-align:center;
@@ -217,9 +293,6 @@ h1, h2, h3, h4, h5, h6 {
     background-size: cover;
 }
 
-
-
-
 /* Gallery */
 .gallery {
 	margin-top: 30px;
@@ -227,4 +300,91 @@ h1, h2, h3, h4, h5, h6 {
 
 .gallery img:hover {
 	opacity: 0.4;
+}
+
+.title {
+	width: 100%;
+}
+
+.two-col-layout {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.two-col-item {
+    width: 34%;
+    margin-right: 8%;
+    margin-left: 8%;
+    min-width: 250px;
+}
+
+.three-col-layout {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.three-col-item {
+    width: 24%;
+    margin-right: 3%;
+    margin-left: 3%;
+    min-width: 200px;
+}
+
+.justify-ends-layout {
+	display: flex;
+	justify-content: space-between;
+}
+
+.white {
+	color: white;
+}
+
+.gray {
+	color: #AAA;
+}
+
+/* ----------------------------------------- */
+
+.spinner {
+  margin: 100px auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #333;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
 }
