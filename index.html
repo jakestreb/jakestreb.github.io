@@ -42,7 +42,7 @@
 
 		<div class="mb" v-for="post in gristData" v-show="gristData" style="display: none;">
 			<h2>{{ post.Title }}</h2>
-			<p class="gray">{{ post.Date }}</p>
+			<p class="gray">{{ new Date(post.Date * 1000).format('MM/DD/YY') }}</p>
 			<p>{{ post.Content }}</p>
 		</div>
 
@@ -65,6 +65,7 @@
 		</div>
 	</div><!--/footerwrap -->
 
+	<script src="date-format-lite.js"></script>
 	<script src="basket-api.js"></script>
     <script src="util.js"></script>
     <script src="https://unpkg.com/vue"></script>
