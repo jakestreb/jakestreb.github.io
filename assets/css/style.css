@@ -150,21 +150,25 @@ a {
 	 	domain-images-pictures/pepper-pictures/fruits-vegetables-pepper.jpg */
 	background: url("../img/Fruits_vegetables_pepper.jpg") no-repeat center bottom;
 	height: 600px;
+	background-size: cover;
 }
 
 #menu-navbar {
     /* Luca Nebuloni - https://www.flickr.com/photos/nebulux/7822721154/ */
 	background: url("../img/Pad_Thai_(7822721154).jpg") no-repeat center bottom;
+	background-size: cover;
 }
 
 #locations-navbar {
     /* NASA - http://spaceflight.nasa.gov/gallery/images/station/crew-35/html/iss035e008056.html */
 	background: url(../img/ISS-35_New_York_City_metropolitan_area.jpg) no-repeat center bottom;
+	background-size: cover;
 }
 
 #news-navbar {
     /* Rainer Zenz at the German language Wikipedia */
 	background: url(../img/Pfeffer-Gewurz.jpg) no-repeat center bottom;
+	background-size: cover;
 }
 
 .navbar-overlay {
@@ -172,10 +176,6 @@ a {
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.6);
 }
-
-/* ==========================================================================
-   Wrap Sections
-   ========================================================================== */
 
 #headerwrap {
 	margin-top: -70px;
@@ -211,21 +211,6 @@ a {
 	color: #ffffff
 }
 
-#social {
-	padding-top: 50px;
-	padding-bottom: 50px;
-	background-color: #f2f2f2;
-}
-
-#social i {
-	font-size: 40px;
-	color: #4a4a4a
-}
-
-#social i:hover {
-	color: #1abc9c
-}
-
 #footerwrap {
 	padding-top: 70px;
 	padding-bottom: 50px;
@@ -235,71 +220,6 @@ a {
 #footerwrap p {
 	color: #f2f2f2;
 	margin-left: 10px;
-}
-
-#workwrap {
-	background: url(../img/work.jpg) no-repeat center top;
-	margin-top: -70px;
-	padding-top: 250px;
-	text-align:center;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 650px;
-	width: 100%;
-
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-#workwrap h1 {
-	color:#ffffff;
-	padding-top: 10px;
-	padding-bottom: 20px;
-	letter-spacing: 4px;
-	font-size: 80px;
-	font-weight: bold;
-}
-
-#workwrap h4 {
-	font-weight: 400;
-	color: #ffffff
-}
-
-#aboutwrap {
-	background: url(../img/about.jpg) no-repeat center top;
-	margin-top: -70px;
-	padding-top: 250px;
-	text-align:center;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 550px;
-	width: 100%;
-
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-/* Gallery */
-.gallery {
-	margin-top: 30px;
-}
-
-.gallery img:hover {
-	opacity: 0.4;
 }
 
 .title {
@@ -345,7 +265,32 @@ a {
 	color: #AAA;
 }
 
-/* ----------------------------------------- */
+/*
+   ==========================================================================
+   Loading spinner style
+   ==========================================================================
+
+	The MIT License (MIT)
+
+	Copyright (c) 2015 Tobias Ahlin
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy of
+	this software and associated documentation files (the "Software"), to deal in
+	the Software without restriction, including without limitation the rights to
+	use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+	the Software, and to permit persons to whom the Software is furnished to do so,
+	subject to the following conditions:
+
+	The above copyright notice and this permission notice shall be included in all
+	copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+	FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+	COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+	IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+	CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
 
 .spinner {
   margin: 100px auto 0;

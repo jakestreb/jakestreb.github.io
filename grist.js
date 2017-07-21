@@ -37,22 +37,4 @@ GristAPI.prototype.loadDataUsingVue = function(embedId, elementId) {
   });
 };
 
-// function menuItem(name, desc, price) {
-//   return name ? `<div class="mb">
-//       <h4>${name}</h4>
-//       <p>${desc || ''}</p>
-//       <p>\$${price}</p>
-//     </div>` : '';
-// }
-
-// retrieveData(menuItems => {
-//   menuItems.forEach((item, i) => {
-//     let type = item.Type === 'Appetizer' ? 'appetizers' :
-//       (item.Type === 'Dessert' ? 'desserts' : 'entrees');
-//     let side = (i % 2) ? 'left' : 'right';
-//     document.getElementById(`${side}-${type}`).innerHTML +=
-//       menuItem(item.Item, item.Description, item.Price);
-//   });
-// })
-
 var grist = new GristAPI();
