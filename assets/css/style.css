@@ -265,6 +265,22 @@ a {
 	color: #AAA;
 }
 
+.hbox {
+	display: flex;
+}
+
+.staff-pic {
+	min-width: 160px;
+}
+
+.staff-pic > img {
+	display: block;
+	max-width: 150px;
+	max-height: 180px;
+	width: auto;
+	height: auto;
+}
+
 /*
    ==========================================================================
    Loading spinner style
